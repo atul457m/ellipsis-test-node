@@ -13,7 +13,10 @@ const router = express.Router();
 // Routes
 
 router.get("/", (_, res) => {
-  const GOOGLE_CLIENT_ID = "450173309136-0mk24q4kfs5tfogirh8upf1npop3556.apps.googleusercontent.com"; 
+  if (!process.env.GOOGLE_CLIENT_ID) {
+    throw new Error('The GOOGLE_CLIENT_ID environment variable must be set.');
+  }
+  const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
   console.log(GOOGLE_CLIENT_ID);
   res.json({
     message: "This is root endpoint",
