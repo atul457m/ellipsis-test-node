@@ -13,11 +13,13 @@ const router = express.Router();
 // Routes
 
 router.get("/", (_, res) => {
-  const GOOGLE_CLIENT_ID = "450173309136-0mk24q4kfs5tfogirh8upf1npop3556.apps.googleusercontent.com"; 
+  throw new Error("test error");
+  const GOOGLE_CLIENT_ID =
+    "450173309136-0mk24q4kfs5tfogirh8upf1npop3556.apps.googleusercontent.com";
   console.log(GOOGLE_CLIENT_ID);
   res.json({
     message: "This is root endpoint",
-    data: GOOGLE_CLIENT_ID
+    data: GOOGLE_CLIENT_ID,
   });
 });
 
