@@ -10,3 +10,17 @@ build:
     - command: "echo 'hello world'"
       description: "This is an example command, replace it with your own."
 
+
+pr_review:
+  confidence_threshold: 0.7
+  rules:
+    - "Code should be DRY (Dont Repeat Yourself)"
+    - "There should no secrets or credentials in the code"
+    - "Extremely Complicated Code Needs Comments"
+    - "Use Descriptive Variable and Constant Names"
+    - "API routes must have error handling, they shouldn't intentionally return a HTTP 500"
+    - "Use retries when calling external API services"
+    - "Don't log sensitive data"
+    - "Follow the Single Responsibility Principle"
+    - "Function and Method Naming Should Follow Consistent Patterns"
+
