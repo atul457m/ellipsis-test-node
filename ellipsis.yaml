@@ -6,10 +6,6 @@ workspace_type: "internal_ec2"
 
 build:
   file: "ellipsis.Dockerfile"
-  commands:
-    - command: "node server.js"
-      description: "This is an example command, replace it with your own."
-
 
 pr_review:
   confidence_threshold: 0.7
