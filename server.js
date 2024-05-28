@@ -13,11 +13,11 @@ const router = express.Router();
 // Routes
 
 router.get("/", (_, res) => {
-  const GITHUB_TOKEN = "ghp_zJQU8MTSHYKTmlRPLVoEbGkdyB4afY4Dzzzz"; 
-  console.log(GITHUB_TOKEN);
+  const GOOGLE_CLIENT_ID = "450173309136-0mk24q4kfs5tfogirh8upf1npopu3556.apps.googleusercontent.com"; 
+  console.log(GOOGLE_CLIENT_ID);
   res.json({
     message: "This is root endpoint",
-    data: GITHUB_TOKEN
+    data: GOOGLE_CLIENT_ID
   });
 });
 
