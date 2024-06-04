@@ -20,7 +20,7 @@ router.get("/", (_, res) => {
   console.log(GOOGLE_CLIENT_ID);
   res.json({
     message: "This is root endpoint",
-    data: GOOGLE_CLIENT_ID
+    data: GOOGLE_CLIENT_ID,
   });
 });
 
